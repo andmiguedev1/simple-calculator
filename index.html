@@ -13,9 +13,9 @@
     />
     <!-- Favicon for iPhone and iPad  -->
     <link
-      rel="icon"
+      rel="apple-touch-icon"
       type="image/png"
-      sizes="57x57"
+      sizes="180x180"
       href="assets/images/apple-touch-icon.png"
     />
     <!-- Favicon for Android Chrome v39+ -->
@@ -38,11 +38,43 @@
       type="image/x-icon"
       href="assets/images/favicon.ico"
     />
+    <link rel="manifest" href="assets/images/site.webmanifest" />
     <title>Simple Calculator | Basic Math Operations</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="calculator">
+      <div class="calculator_header">
+        <h1>Simple Calculator</h1>
+      </div>
+      <div class="calculator_display">
+        <p id="result" class="calculator-result"></p>
+      </div>
+      <div class="calculator_body">
+        <button class="small-btn top" id="sqrt">SQRT</button>
+        <button class="small-btn top" id="rem">%</button>
+        <button class="small-btn top" id="off">OFF</button>
+        <button class="small-btn top" id="reset">DEL</button>
+        <button class="small-btn" id="num-7">7</button>
+        <button class="small-btn" id="num-8">8</button>
+        <button class="small-btn" id="num-9">9</button>
+        <button class="small-btn operator" id="div">/</button>
+        <button class="small-btn" id="num-4">4</button>
+        <button class="small-btn" id="num-5">5</button>
+        <button class="small-btn" id="num-6">6</button>
+        <button class="small-btn operator" id="times">x</button>
+        <button class="small-btn" id="num-1">1</button>
+        <button class="small-btn" id="num-2">2</button>
+        <button class="small-btn" id="num-3">3</button>
+        <button class="small-btn operator" id="minus">-</button>
+        <button class="small-btn" id="num-0">0</button>
+        <button class="small-btn" id="point">.</button>
+        <button class="small-btn equal" id="equal">=</button>
+        <button class="small-btn operator" id="add">+</button>
+      </div>
+    </div>
+  </body>
 </html>
