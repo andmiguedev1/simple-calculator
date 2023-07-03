@@ -1,5 +1,6 @@
 // Access calculator elements
 const numbers = document.querySelectorAll("[id*=num]");
+const point = document.getElementById("point");
 const operators = document.querySelectorAll("[id*=op]");
 const display = document.getElementById("display");
 const equal = document.getElementById("equal");
@@ -21,11 +22,20 @@ const updateDisplay = (strNumber) => {
   }
 };
 
+// Use the eval method to calculate the
+// result of the math expression only
+// if there is a valid math operator.
 const calculateResult = () => {
   if (mathOperator !== undefined && !newNumber) {
     const result = eval(
       `${Number(pastNumber)}${mathOperator}${Number(display.textContent)}`
     );
+
+    if (result % 1 == 0) {
+      display.textContent = result;
+    } else {
+      display.textContent = result.toFixed(2);
+    }
 
     display.textContent = result;
   }
@@ -35,6 +45,15 @@ numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     updateDisplay(e.target.textContent);
   });
+});
+
+point.addEventListener("click", () => {
+  if (newNumber) {
+    display.textContent = "0.";
+    newNumber = false;
+  } else if (!display.textContent.includes(".")) {
+    display.textContent += ".";
+  }
 });
 
 operators.forEach((operator) => {
@@ -54,4 +73,5 @@ equal.addEventListener("click", () => {
 reset.addEventListener("click", () => {
   display.textContent = 0;
   newNumber = true;
+  mathOperator = undefined;
 });
