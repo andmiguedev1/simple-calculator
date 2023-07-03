@@ -53,28 +53,28 @@
       </div>
       <div class="calculator__body">
         <button class="small-btn top" id="sqrt">&#8730;</button>
-        <button class="small-btn top" id="rem">%</button>
+        <button onclick="getMathOperator('%')" class="small-btn top" id="rem">%</button>
         <button onclick="clearDisplay()" class="small-btn top" id="reset">CE</button>
         <button class="small-btn top" id="remove">DEL</button>
-        <button onclick="getNumber(7)" class="small-btn" id="num-7">7</button>
-        <button onclick="getNumber(8)" class="small-btn" id="num-8">8</button>
-        <button onclick="getNumber(9)" class="small-btn" id="num-9">9</button>
+        <button onclick="getNumbers(7)" class="small-btn" id="num-7">7</button>
+        <button onclick="getNumbers(8)" class="small-btn" id="num-8">8</button>
+        <button onclick="getNumbers(9)" class="small-btn" id="num-9">9</button>
         <button onclick="getMathOperator('/')" class="small-btn operator" id="op-div">
           &#8725;
         </button>
-        <button onclick="getNumber(4)" class="small-btn" id="num-4">4</button>
-        <button onclick="getNumber(5)" class="small-btn" id="num-5">5</button>
-        <button onclick="getNumber(6)" class="small-btn" id="num-6">6</button>
+        <button onclick="getNumbers(4)" class="small-btn" id="num-4">4</button>
+        <button onclick="getNumbers(5)" class="small-btn" id="num-5">5</button>
+        <button onclick="getNumbers(6)" class="small-btn" id="num-6">6</button>
         <button onclick="getMathOperator('*')" class="small-btn operator" id="op-times">
           &#8727;
         </button>
-        <button onclick="getNumber(1)" class="small-btn" id="num-1">1</button>
-        <button onclick="getNumber(2)" class="small-btn" id="num-2">2</button>
-        <button onclick="getNumber(3)" class="small-btn" id="num-3">3</button>
+        <button onclick="getNumbers(1)" class="small-btn" id="num-1">1</button>
+        <button onclick="getNumbers(2)" class="small-btn" id="num-2">2</button>
+        <button onclick="getNumbers(3)" class="small-btn" id="num-3">3</button>
         <button onclick="getMathOperator('-')" class="small-btn operator" id="op-minus">
           &#8722;
         </button>
-        <button onclick="getNumber(0)" class="small-btn" id="num-0">0</button>
+        <button onclick="getNumbers(0)" class="small-btn" id="num-0">0</button>
         <button class="small-btn" id="point">&#8729;</button>
         <button onclick="mathCalculator()" class="small-btn equal" id="equal">=</button>
         <button onclick="getMathOperator('+')" class="small-btn operator" id="op-add">

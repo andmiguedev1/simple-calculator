@@ -16,6 +16,10 @@ body {
   background-color: var(--primary-bg-color);
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
 .calculator {
   width: 400px;
   overflow: hidden;
