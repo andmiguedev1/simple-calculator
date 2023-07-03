@@ -38,7 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100px;
+  height: 70px;
   margin: 1.25rem;
   padding: 1rem;
   background-color: var(--third-bg-color);
@@ -47,11 +47,14 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.calculator-result {
+.calculator input {
   color: var(--primary-text-color);
   font-size: 2rem;
   font-weight: bold;
   text-align: right;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
 }
 .calculator__body {
   display: grid;
