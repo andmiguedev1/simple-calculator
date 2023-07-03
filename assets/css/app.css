@@ -51,7 +51,7 @@ textarea:focus, input:focus {
   border-radius: 10px;
   overflow: hidden;
 }
-.calculator input {
+.calculator__display p {
   color: var(--primary-text-color);
   font-size: 2rem;
   font-weight: bold;
