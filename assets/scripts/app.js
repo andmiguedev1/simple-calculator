@@ -1,8 +1,9 @@
 // Access calculator elements
 const numbers = document.querySelectorAll("[id*=num]");
-const point = document.getElementById("point");
 const operators = document.querySelectorAll("[id*=op]");
 const display = document.getElementById("display");
+const point = document.getElementById("point");
+const remove = document.getElementById("remove");
 const equal = document.getElementById("equal");
 const reset = document.getElementById("reset");
 
@@ -54,6 +55,14 @@ point.addEventListener("click", () => {
   } else if (!display.textContent.includes(".")) {
     display.textContent += ".";
   }
+});
+
+remove.addEventListener("click", () => {
+  display.textContent = display.textContent.substring(0, display.textContent.length - 1);
+
+  // if (display.textContent.length <= 0) {
+  //   newNumber = true;
+  // }
 });
 
 operators.forEach((operator) => {
